@@ -8,35 +8,35 @@
   },
   {
     "SKU": 1037797,
-    "DESCRITOR": "Feij„o",
+    "DESCRITOR": "Feij√£o",
     "DEPARTAMENTO": "Mercearia",
     "PRECO": 6,
     "UNIDADE": "KG"
   },
   {
     "SKU": 1000889,
-    "DESCRITOR": "Macarr„o",
+    "DESCRITOR": "Macarr√£o",
     "DEPARTAMENTO": "Mercearia",
     "PRECO": 2.5,
     "UNIDADE": "Pacote"
   },
   {
     "SKU": 1004327,
-    "DESCRITOR": "AÁ˙car",
+    "DESCRITOR": "A√ß√∫car",
     "DEPARTAMENTO": "Mercearia",
     "PRECO": 3,
     "UNIDADE": "KG"
   },
   {
     "SKU": 1088126,
-    "DESCRITOR": "CafÈ",
+    "DESCRITOR": "Caf√©",
     "DEPARTAMENTO": "Mercearia",
     "PRECO": 9,
     "UNIDADE": "KG"
   },
   {
     "SKU": 544931,
-    "DESCRITOR": "”leo de cozinha",
+    "DESCRITOR": "√ìleo de cozinha",
     "DEPARTAMENTO": "Mercearia",
     "PRECO": 5.5,
     "UNIDADE": "Garrafa"
@@ -58,35 +58,35 @@
   {
     "SKU": 788975,
     "DESCRITOR": "Leite",
-    "DEPARTAMENTO": "LaticÌnios",
+    "DEPARTAMENTO": "Latic√≠nios",
     "PRECO": 3,
     "UNIDADE": "Garrafa"
   },
   {
     "SKU": 1002767,
     "DESCRITOR": "Queijo",
-    "DEPARTAMENTO": "LaticÌnios",
+    "DEPARTAMENTO": "Latic√≠nios",
     "PRECO": 35,
     "UNIDADE": "KG"
   },
   {
     "SKU": 231776,
     "DESCRITOR": "Manteiga",
-    "DEPARTAMENTO": "LaticÌnios",
+    "DEPARTAMENTO": "Latic√≠nios",
     "PRECO": 6,
     "UNIDADE": "Pacote"
   },
   {
     "SKU": 479745,
     "DESCRITOR": "Iogurte",
-    "DEPARTAMENTO": "LaticÌnios",
+    "DEPARTAMENTO": "Latic√≠nios",
     "PRECO": 2.5,
     "UNIDADE": "Pacote"
   },
   {
     "SKU": 1051518,
     "DESCRITOR": "Ovos",
-    "DEPARTAMENTO": "LaticÌnios",
+    "DEPARTAMENTO": "Latic√≠nios",
     "PRECO": 8,
     "UNIDADE": "Duzia"
   },
@@ -113,7 +113,7 @@
   },
   {
     "SKU": 695594,
-    "DESCRITOR": "LinguiÁa",
+    "DESCRITOR": "Lingui√ßa",
     "DEPARTAMENTO": "Carnes",
     "PRECO": 15,
     "UNIDADE": "KG"
@@ -134,7 +134,7 @@
   },
   {
     "SKU": 520380,
-    "DESCRITOR": "P„o",
+    "DESCRITOR": "P√£o",
     "DEPARTAMENTO": "Padaria",
     "PRECO": 3.5,
     "UNIDADE": "KG"
@@ -148,7 +148,7 @@
   },
   {
     "SKU": 243083,
-    "DESCRITOR": "P„es de forma",
+    "DESCRITOR": "P√£es de forma",
     "DEPARTAMENTO": "Padaria",
     "PRECO": 5,
     "UNIDADE": "Pacote"
@@ -232,7 +232,7 @@
   },
   {
     "SKU": 1096818,
-    "DESCRITOR": "¡gua",
+    "DESCRITOR": "√Ågua",
     "DEPARTAMENTO": "Bebidas",
     "PRECO": 2.5,
     "UNIDADE": "Garrafas"

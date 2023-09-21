@@ -9,8 +9,9 @@ services:
     ports:
       - "11533:1433"
     volumes:
-      - ./backup:/var/opt/mssql/backup # Substitua pelo caminho absoluto da sua pasta externa
-      - ./log:/var/opt/mssql/log # Substitua pelo caminho absoluto da sua pasta externa
+      - ./backup:/var/opt/mssql/backup  
+      - ./log:/var/opt/mssql/log  
+      - ./data:/var/opt/mssql/data  
 
 volumes:
   ssis-packages:
