@@ -24,3 +24,31 @@
         }
 
     }
+	
+	 string jsonFilePath = @"E:\_EDIELSON\_LAB\_Courses\Formacao Alura Data Warehouse\formacao-dw\data\dimensoes\produto\in\PRODUTOS.JSON";
+ var encoding = Encoding.GetEncoding("ISO-8859-1");
+
+ // Ler o arquivo JSON
+ var jsonFileContent = File.ReadAllText(jsonFilePath, encoding);
+
+ var js = new JavaScriptSerializer();
+ var produtos = js.Deserialize<List<Produto>>(jsonFileContent);
+ foreach (var produto in produtos)
+ {
+     Output0Buffer.AddRow();
+     Output0Buffer.sku = produto.Sku;
+     Output0Buffer.descritor = produto.Descritor;
+     Output0Buffer.departamento = produto.Departamento;
+     Output0Buffer.preco = produto.Preco;
+     Output0Buffer.unidade = produto.Unidade;
+ }
+ 
+ public class Produto
+{
+    public string Sku { get; set; }
+    public string Descritor { get; set; }
+    public string Departamento { get; set; }
+    public float Preco { get; set; }
+    public string Unidade { get; set; }
+
+}
