@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="CargaDataLake"
   DTS:PackageType="5"
-  DTS:VersionBuild="112"
-  DTS:VersionGUID="{50AD912F-2E7D-4F08-A5ED-C5EA4A797471}">
+  DTS:VersionBuild="119"
+  DTS:VersionGUID="{0DD49290-7053-49EB-ACDA-3702333EBB2B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -202,11 +202,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=127.0.0.1,11533;User ID=sa;Initial Catalog=DL_ATACADEZ;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-CargaDataLake-{8B4B545B-5BC3-43D2-8B3D-471EC61E0405}127.0.0.1,11533.DL_ATACADEZ.sa;">
+          DTS:ConnectionString="Data Source=127.0.0.1,11533;User ID=sa;Initial Catalog=DL_ATACADEZ;Provider=MSOLEDBSQL.1;Auto Translate=False;Application Name=SSIS-CargaDataLake-{8B4B545B-5BC3-43D2-8B3D-471EC61E0405}127.0.0.1,11533.DL_ATACADEZ.sa;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAEvV/qgx/gUiudcIYI1B8NAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAIxViNEuvMhakxmimtBnxkAAAAAASAAACgAAAAEAAAADFoupCTtfhHqpGHe/6A3pEYAAAAYTM9rFKvmUw7jU9+eceshyBvXczZEkJyFAAAAA8Ziri2v1zS4vLLHMgcV2d1JFJs</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAEvV/qgx/gUiudcIYI1B8NAAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADwGs9HVgHrhc5AMKmiZtEFAAAAAASAAACgAAAAEAAAAEDR1Ao9SmaJGeN5u/ue3coYAAAAQzoM2wxFzJFj03dXweXj38K9z5Onk2WyFAAAABJUitjGJ2bSpemcc+9EKwAp2QSM</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -5024,7 +5024,8 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Carga de Produto\Comando OLE DB.Inputs[Entrada de Comando OLE DB].Columns[ARQUIVO_ORIGEM_CONVERTIDO]"
-                      cachedDataType="wstr"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
                       cachedLength="32"
                       cachedName="ARQUIVO_ORIGEM_CONVERTIDO"
                       externalMetadataColumnId="Package\Carga de Produto\Comando OLE DB.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_0]"
@@ -5038,13 +5039,13 @@
                       externalMetadataColumnId="Package\Carga de Produto\Comando OLE DB.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_1]"
                       lineageId="Package\Carga de Produto\Juntado dados XML e JSON.Outputs[Saída da Junção de Mesclagem].Columns[unidade]" />
                     <inputColumn
-                      refId="Package\Carga de Produto\Comando OLE DB.Inputs[Entrada de Comando OLE DB].Columns[FORNECEDOR_CONVERTIDO]"
+                      refId="Package\Carga de Produto\Comando OLE DB.Inputs[Entrada de Comando OLE DB].Columns[CNPJ_CONVERTIDO]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="FORNECEDOR_CONVERTIDO"
+                      cachedLength="50"
+                      cachedName="CNPJ_CONVERTIDO"
                       externalMetadataColumnId="Package\Carga de Produto\Comando OLE DB.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_2]"
-                      lineageId="Package\Carga de Produto\Conversão de colunas para PRODUTOS.Outputs[Saída de Conversão de Dados].Columns[FORNECEDOR_CONVERTIDO]" />
+                      lineageId="Package\Carga de Produto\Conversão de colunas para PRODUTOS.Outputs[Saída de Conversão de Dados].Columns[CNPJ_CONVERTIDO]" />
                     <inputColumn
                       refId="Package\Carga de Produto\Comando OLE DB.Inputs[Entrada de Comando OLE DB].Columns[SKU_CONVERTIDO]"
                       cachedCodepage="1252"
@@ -5069,12 +5070,13 @@
                       externalMetadataColumnId="Package\Carga de Produto\Comando OLE DB.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_4]"
                       lineageId="Package\Carga de Produto\Juntado dados XML e JSON.Outputs[Saída da Junção de Mesclagem].Columns[departamento]" />
                     <inputColumn
-                      refId="Package\Carga de Produto\Comando OLE DB.Inputs[Entrada de Comando OLE DB].Columns[FORNECEDOR]"
-                      cachedDataType="wstr"
+                      refId="Package\Carga de Produto\Comando OLE DB.Inputs[Entrada de Comando OLE DB].Columns[FORNECEDOR_CONVERTIDO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
                       cachedLength="255"
-                      cachedName="FORNECEDOR"
+                      cachedName="FORNECEDOR_CONVERTIDO"
                       externalMetadataColumnId="Package\Carga de Produto\Comando OLE DB.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_5]"
-                      lineageId="Package\Carga de Produto\Juntado dados XML e JSON.Outputs[Saída da Junção de Mesclagem].Columns[FORNECEDOR]" />
+                      lineageId="Package\Carga de Produto\Conversão de colunas para PRODUTOS.Outputs[Saída de Conversão de Dados].Columns[FORNECEDOR_CONVERTIDO]" />
                     <inputColumn
                       refId="Package\Carga de Produto\Comando OLE DB.Inputs[Entrada de Comando OLE DB].Columns[descritor]"
                       cachedCodepage="1252"
@@ -5241,7 +5243,7 @@
                   description="O comando SQL a ser executado."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[tbl_produto] SET [arquivo_origem] = ?,[atr_unidade_medida] = ?,[cod_fornecedor] = ?,[data_carga] = ?,[desc_departamento] = ?,[desc_fornecedor] = ?,[desc_produto] = ? WHERE [cod_produto] = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[tbl_produto] SET [atr_unidade_medida] = ?,[data_carga] = ?,[desc_departamento] = ?,[desc_produto] = ? WHERE [cod_produto] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
@@ -5264,28 +5266,13 @@
                   name="Entrada de Comando OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].Columns[ARQUIVO_ORIGEM_CONVERTIDO]"
-                      cachedDataType="wstr"
-                      cachedLength="32"
-                      cachedName="ARQUIVO_ORIGEM_CONVERTIDO"
-                      externalMetadataColumnId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_0]"
-                      lineageId="Package\Carga de Produto\Conversão de colunas para PRODUTOS.Outputs[Saída de Conversão de Dados].Columns[ARQUIVO_ORIGEM_CONVERTIDO]" />
-                    <inputColumn
                       refId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].Columns[unidade]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="unidade"
-                      externalMetadataColumnId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_1]"
+                      externalMetadataColumnId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_0]"
                       lineageId="Package\Carga de Produto\Juntado dados XML e JSON.Outputs[Saída da Junção de Mesclagem].Columns[unidade]" />
-                    <inputColumn
-                      refId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].Columns[FORNECEDOR_CONVERTIDO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="FORNECEDOR_CONVERTIDO"
-                      externalMetadataColumnId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_2]"
-                      lineageId="Package\Carga de Produto\Conversão de colunas para PRODUTOS.Outputs[Saída de Conversão de Dados].Columns[FORNECEDOR_CONVERTIDO]" />
                     <inputColumn
                       refId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].Columns[SKU_CONVERTIDO]"
                       cachedCodepage="1252"
@@ -5293,13 +5280,13 @@
                       cachedLength="50"
                       cachedName="SKU_CONVERTIDO"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_7]"
+                      externalMetadataColumnId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_4]"
                       lineageId="Package\Carga de Produto\Juntado dados XML e JSON.Outputs[Saída da Junção de Mesclagem].Columns[SKU_CONVERTIDO]" />
                     <inputColumn
                       refId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].Columns[DATA_CARGA]"
                       cachedDataType="dbTimeStamp"
                       cachedName="DATA_CARGA"
-                      externalMetadataColumnId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_3]"
+                      externalMetadataColumnId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_1]"
                       lineageId="Package\Carga de Produto\Acrescentando colunas do METADATA.Outputs[Saída de Coluna Derivada].Columns[DATA_CARGA]" />
                     <inputColumn
                       refId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].Columns[departamento]"
@@ -5307,22 +5294,15 @@
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="departamento"
-                      externalMetadataColumnId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_4]"
+                      externalMetadataColumnId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_2]"
                       lineageId="Package\Carga de Produto\Juntado dados XML e JSON.Outputs[Saída da Junção de Mesclagem].Columns[departamento]" />
-                    <inputColumn
-                      refId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].Columns[FORNECEDOR]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="FORNECEDOR"
-                      externalMetadataColumnId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_5]"
-                      lineageId="Package\Carga de Produto\Juntado dados XML e JSON.Outputs[Saída da Junção de Mesclagem].Columns[FORNECEDOR]" />
                     <inputColumn
                       refId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].Columns[descritor]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="200"
                       cachedName="descritor"
-                      externalMetadataColumnId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_6]"
+                      externalMetadataColumnId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_3]"
                       lineageId="Package\Carga de Produto\Juntado dados XML e JSON.Outputs[Saída da Junção de Mesclagem].Columns[descritor]" />
                   </inputColumns>
                   <externalMetadataColumns
@@ -5331,7 +5311,7 @@
                       refId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_0]"
                       codePage="1252"
                       dataType="str"
-                      length="200"
+                      length="50"
                       name="Param_0">
                       <properties>
                         <property
@@ -5342,9 +5322,7 @@
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_1]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="dbTimeStamp"
                       name="Param_1">
                       <properties>
                         <property
@@ -5357,7 +5335,7 @@
                       refId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_2]"
                       codePage="1252"
                       dataType="str"
-                      length="25"
+                      length="200"
                       name="Param_2">
                       <properties>
                         <property
@@ -5368,7 +5346,9 @@
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_3]"
-                      dataType="dbTimeStamp"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
                       name="Param_3">
                       <properties>
                         <property
@@ -5381,47 +5361,8 @@
                       refId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_4]"
                       codePage="1252"
                       dataType="str"
-                      length="200"
-                      name="Param_4">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Informações de parâmetro. Corresponde os valores de DBPARAMFLAGSENUM de OLE DB."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_5]"
-                      codePage="1252"
-                      dataType="str"
-                      length="200"
-                      name="Param_5">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Informações de parâmetro. Corresponde os valores de DBPARAMFLAGSENUM de OLE DB."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_6]"
-                      codePage="1252"
-                      dataType="str"
-                      length="200"
-                      name="Param_6">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Informações de parâmetro. Corresponde os valores de DBPARAMFLAGSENUM de OLE DB."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Carga de Produto\Comando OLE DB 1.Inputs[Entrada de Comando OLE DB].ExternalColumns[Param_7]"
-                      codePage="1252"
-                      dataType="str"
                       length="25"
-                      name="Param_7">
+                      name="Param_4">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -6841,7 +6782,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Carga de Produto\Conversão de colunas para PRODUTOS.Outputs[Saída de Conversão de Dados].Columns[ARQUIVO_ORIGEM_CONVERTIDO]"
-                      dataType="wstr"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
                       length="32"
@@ -6976,7 +6918,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   dataType="System.String"
                   description="Especifica a instrução SELECT usada para criar um conjunto de linhas de esquema."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [arquivo_origem], [atr_unidade_medida], [cod_fornecedor], [cod_produto], [data_carga], [desc_departamento], [desc_fornecedor], [desc_produto] FROM [dbo].[tbl_produto]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [atr_unidade_medida], [cod_produto], [data_carga], [desc_departamento], [desc_produto] FROM [dbo].[tbl_produto]</property>
                 <property
                   dataType="System.String"
                   description="Especifica a cláusula WHERE na instrução SELECT que seleciona a linha atual entre as linhas com chaves de negócios idênticas."
@@ -7025,20 +6967,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   name="Entrada de Dimensão de Alteração Lenta">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Carga de Produto\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta].Columns[ARQUIVO_ORIGEM_CONVERTIDO]"
-                      cachedDataType="wstr"
-                      cachedLength="32"
-                      cachedName="ARQUIVO_ORIGEM_CONVERTIDO"
-                      externalMetadataColumnId="Package\Carga de Produto\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta].ExternalColumns[arquivo_origem]"
-                      lineageId="Package\Carga de Produto\Conversão de colunas para PRODUTOS.Outputs[Saída de Conversão de Dados].Columns[ARQUIVO_ORIGEM_CONVERTIDO]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">2</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\Carga de Produto\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta].Columns[unidade]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -7046,21 +6974,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       cachedName="unidade"
                       externalMetadataColumnId="Package\Carga de Produto\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta].ExternalColumns[atr_unidade_medida]"
                       lineageId="Package\Carga de Produto\Juntado dados XML e JSON.Outputs[Saída da Junção de Mesclagem].Columns[unidade]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">2</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Carga de Produto\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta].Columns[FORNECEDOR_CONVERTIDO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="FORNECEDOR_CONVERTIDO"
-                      externalMetadataColumnId="Package\Carga de Produto\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta].ExternalColumns[cod_fornecedor]"
-                      lineageId="Package\Carga de Produto\Conversão de colunas para PRODUTOS.Outputs[Saída de Conversão de Dados].Columns[FORNECEDOR_CONVERTIDO]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -7113,20 +7026,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Carga de Produto\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta].Columns[FORNECEDOR]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="FORNECEDOR"
-                      externalMetadataColumnId="Package\Carga de Produto\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta].ExternalColumns[desc_fornecedor]"
-                      lineageId="Package\Carga de Produto\Juntado dados XML e JSON.Outputs[Saída da Junção de Mesclagem].Columns[FORNECEDOR]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">2</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\Carga de Produto\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta].Columns[descritor]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -7145,23 +7044,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Carga de Produto\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta].ExternalColumns[arquivo_origem]"
-                      codePage="1252"
-                      dataType="str"
-                      length="200"
-                      name="arquivo_origem" />
-                    <externalMetadataColumn
                       refId="Package\Carga de Produto\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta].ExternalColumns[atr_unidade_medida]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="atr_unidade_medida" />
-                    <externalMetadataColumn
-                      refId="Package\Carga de Produto\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta].ExternalColumns[cod_fornecedor]"
-                      codePage="1252"
-                      dataType="str"
-                      length="25"
-                      name="cod_fornecedor" />
                     <externalMetadataColumn
                       refId="Package\Carga de Produto\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta].ExternalColumns[cod_produto]"
                       codePage="1252"
@@ -7178,12 +7065,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       dataType="str"
                       length="200"
                       name="desc_departamento" />
-                    <externalMetadataColumn
-                      refId="Package\Carga de Produto\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta].ExternalColumns[desc_fornecedor]"
-                      codePage="1252"
-                      dataType="str"
-                      length="200"
-                      name="desc_fornecedor" />
                     <externalMetadataColumn
                       refId="Package\Carga de Produto\Dimensão de Alteração Lenta.Inputs[Entrada de Dimensão de Alteração Lenta].ExternalColumns[desc_produto]"
                       codePage="1252"
@@ -7350,19 +7231,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       externalMetadataColumnId="Package\Carga de Produto\Insert Destination.Inputs[Entrada de Destino OLE DB].ExternalColumns[atr_unidade_medida]"
                       lineageId="Package\Carga de Produto\Juntado dados XML e JSON.Outputs[Saída da Junção de Mesclagem].Columns[unidade]" />
                     <inputColumn
-                      refId="Package\Carga de Produto\Insert Destination.Inputs[Entrada de Destino OLE DB].Columns[FORNECEDOR]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="FORNECEDOR"
-                      externalMetadataColumnId="Package\Carga de Produto\Insert Destination.Inputs[Entrada de Destino OLE DB].ExternalColumns[desc_fornecedor]"
-                      lineageId="Package\Carga de Produto\Juntado dados XML e JSON.Outputs[Saída da Junção de Mesclagem].Columns[FORNECEDOR]" />
-                    <inputColumn
-                      refId="Package\Carga de Produto\Insert Destination.Inputs[Entrada de Destino OLE DB].Columns[DATA_CARGA]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="DATA_CARGA"
-                      externalMetadataColumnId="Package\Carga de Produto\Insert Destination.Inputs[Entrada de Destino OLE DB].ExternalColumns[data_carga]"
-                      lineageId="Package\Carga de Produto\Acrescentando colunas do METADATA.Outputs[Saída de Coluna Derivada].Columns[DATA_CARGA]" />
-                    <inputColumn
                       refId="Package\Carga de Produto\Insert Destination.Inputs[Entrada de Destino OLE DB].Columns[CNPJ_CONVERTIDO]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -7371,12 +7239,27 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       externalMetadataColumnId="Package\Carga de Produto\Insert Destination.Inputs[Entrada de Destino OLE DB].ExternalColumns[cod_fornecedor]"
                       lineageId="Package\Carga de Produto\Conversão de colunas para PRODUTOS.Outputs[Saída de Conversão de Dados].Columns[CNPJ_CONVERTIDO]" />
                     <inputColumn
-                      refId="Package\Carga de Produto\Insert Destination.Inputs[Entrada de Destino OLE DB].Columns[ARQUIVO_ORIGEM]"
-                      cachedDataType="wstr"
+                      refId="Package\Carga de Produto\Insert Destination.Inputs[Entrada de Destino OLE DB].Columns[FORNECEDOR_CONVERTIDO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="FORNECEDOR_CONVERTIDO"
+                      externalMetadataColumnId="Package\Carga de Produto\Insert Destination.Inputs[Entrada de Destino OLE DB].ExternalColumns[desc_fornecedor]"
+                      lineageId="Package\Carga de Produto\Conversão de colunas para PRODUTOS.Outputs[Saída de Conversão de Dados].Columns[FORNECEDOR_CONVERTIDO]" />
+                    <inputColumn
+                      refId="Package\Carga de Produto\Insert Destination.Inputs[Entrada de Destino OLE DB].Columns[ARQUIVO_ORIGEM_CONVERTIDO]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
                       cachedLength="32"
-                      cachedName="ARQUIVO_ORIGEM"
+                      cachedName="ARQUIVO_ORIGEM_CONVERTIDO"
                       externalMetadataColumnId="Package\Carga de Produto\Insert Destination.Inputs[Entrada de Destino OLE DB].ExternalColumns[arquivo_origem]"
-                      lineageId="Package\Carga de Produto\Acrescentando colunas do METADATA.Outputs[Saída de Coluna Derivada].Columns[ARQUIVO_ORIGEM]" />
+                      lineageId="Package\Carga de Produto\Conversão de colunas para PRODUTOS.Outputs[Saída de Conversão de Dados].Columns[ARQUIVO_ORIGEM_CONVERTIDO]" />
+                    <inputColumn
+                      refId="Package\Carga de Produto\Insert Destination.Inputs[Entrada de Destino OLE DB].Columns[DATA_CARGA]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DATA_CARGA"
+                      externalMetadataColumnId="Package\Carga de Produto\Insert Destination.Inputs[Entrada de Destino OLE DB].ExternalColumns[data_carga]"
+                      lineageId="Package\Carga de Produto\Acrescentando colunas do METADATA.Outputs[Saída de Coluna Derivada].Columns[DATA_CARGA]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -8540,96 +8423,44 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="270,42"
-          Id="Package\Carga de Produto\Conexão com o arquivo PRODUTO JSON"
-          TopLeft="5.5,107.5" />
+          Size="208,42"
+          Id="Package\Carga de Produto\Juntado dados XML e JSON"
+          TopLeft="337,311.5" />
+        <NodeLayout
+          Size="217,42"
+          Id="Package\Carga de Produto\Dimensão de Alteração Lenta"
+          TopLeft="332.5,617.5" />
         <NodeLayout
           Size="283,42"
           Id="Package\Carga de Produto\Conexão com o arquivo FORNECEDOR XML"
-          TopLeft="293,5.5" />
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="270,42"
+          Id="Package\Carga de Produto\Conexão com o arquivo PRODUTO JSON"
+          TopLeft="306,107.5" />
+        <NodeLayout
+          Size="197,42"
+          Id="Package\Carga de Produto\Conversão de dados SKU"
+          TopLeft="48.5,107.5" />
         <NodeLayout
           Size="186,42"
           Id="Package\Carga de Produto\Classificar SKU do XML"
-          TopLeft="341.5,209.5" />
+          TopLeft="98,209.5" />
         <NodeLayout
           Size="192,42"
           Id="Package\Carga de Produto\Classificar SKU do JSON"
-          TopLeft="88.5,209.5" />
-        <EdgeLayout
-          Id="Package\Carga de Produto.Paths[Output0]"
-          TopLeft="140.5,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="44,60"
-              Start="0,0"
-              End="44,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="4,30" />
-                  <mssgle:LineSegment
-                    End="40,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="40,30"
-                    Point2="44,30"
-                    Point3="44,34" />
-                  <mssgle:LineSegment
-                    End="44,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="345,209.5" />
         <NodeLayout
-          Size="208,42"
-          Id="Package\Carga de Produto\Juntado dados XML e JSON"
-          TopLeft="330.5,311.5" />
+          Size="263,42"
+          Id="Package\Carga de Produto\Conversão de colunas para PRODUTOS"
+          TopLeft="309.5,515.5" />
+        <NodeLayout
+          Size="258,42"
+          Id="Package\Carga de Produto\Acrescentando colunas do METADATA"
+          TopLeft="312,413.5" />
         <EdgeLayout
           Id="Package\Carga de Produto.Paths[Classificar Saída]"
-          TopLeft="434.5,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="33.3333333333333,60"
-              Start="0,0"
-              End="33.3333333333333,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.7251908396947" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.7251908396947"
-                    Point2="0,35.7251908396947"
-                    Point3="4,35.7251908396947" />
-                  <mssgle:LineSegment
-                    End="29.3333333333333,35.7251908396947" />
-                  <mssgle:CubicBezierSegment
-                    Point1="29.3333333333333,35.7251908396947"
-                    Point2="33.3333333333333,35.7251908396947"
-                    Point3="33.3333333333333,39.7251908396947" />
-                  <mssgle:LineSegment
-                    End="33.3333333333333,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Carga de Produto.Paths[Classificar Saída1]"
-          TopLeft="184.5,251.5">
+          TopLeft="191,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8661,13 +8492,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="197,42"
-          Id="Package\Carga de Produto\Conversão de dados SKU"
-          TopLeft="336,107.5" />
         <EdgeLayout
-          Id="Package\Carga de Produto.Paths[Produto]"
-          TopLeft="434.5,47.5">
+          Id="Package\Carga de Produto.Paths[Saída de Conversão de Dados1]"
+          TopLeft="441,557.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8689,7 +8516,41 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Carga de Produto.Paths[Saída de Conversão de Dados]"
-          TopLeft="434.5,149.5">
+          TopLeft="147,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="44,60"
+              Start="0,0"
+              End="44,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="40,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="40,30"
+                    Point2="44,30"
+                    Point3="44,34" />
+                  <mssgle:LineSegment
+                    End="44,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga de Produto.Paths[Saída de Coluna Derivada]"
+          TopLeft="441,455.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8709,13 +8570,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="258,42"
-          Id="Package\Carga de Produto\Acrescentando colunas do METADATA"
-          TopLeft="305.5,413.5" />
         <EdgeLayout
           Id="Package\Carga de Produto.Paths[Saída da Junção de Mesclagem]"
-          TopLeft="434.5,353.5">
+          TopLeft="441,353.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8737,13 +8594,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="263,42"
-          Id="Package\Carga de Produto\Conversão de colunas para PRODUTOS"
-          TopLeft="303,515.5" />
         <EdgeLayout
-          Id="Package\Carga de Produto.Paths[Saída de Coluna Derivada]"
-          TopLeft="434.5,455.5">
+          Id="Package\Carga de Produto.Paths[Produto]"
+          TopLeft="147,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8763,13 +8616,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="217,42"
-          Id="Package\Carga de Produto\Dimensão de Alteração Lenta"
-          TopLeft="326,617.5" />
         <EdgeLayout
-          Id="Package\Carga de Produto.Paths[Saída de Conversão de Dados1]"
-          TopLeft="434.5,557.5">
+          Id="Package\Carga de Produto.Paths[Output0]"
+          TopLeft="441,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8781,6 +8630,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Carga de Produto.Paths[Classificar Saída1]"
+          TopLeft="441,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="33.3333333333333,60"
+              Start="0,0"
+              End="33.3333333333333,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.7251908396947" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.7251908396947"
+                    Point2="0,35.7251908396947"
+                    Point3="4,35.7251908396947" />
+                  <mssgle:LineSegment
+                    End="29.3333333333333,35.7251908396947" />
+                  <mssgle:CubicBezierSegment
+                    Point1="29.3333333333333,35.7251908396947"
+                    Point2="33.3333333333333,35.7251908396947"
+                    Point3="33.3333333333333,39.7251908396947" />
+                  <mssgle:LineSegment
+                    End="33.3333333333333,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8792,10 +8675,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         <NodeLayout
           Size="163,42"
           Id="Package\Carga de Produto\Insert Destination"
-          TopLeft="130,719.5" />
+          TopLeft="136.5,719.5" />
         <EdgeLayout
           Id="Package\Carga de Produto.Paths[Nova Saída]"
-          TopLeft="382.25,659.5">
+          TopLeft="388.75,659.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8832,10 +8715,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         <NodeLayout
           Size="162,42"
           Id="Package\Carga de Produto\Comando OLE DB"
-          TopLeft="353.5,719.5" />
+          TopLeft="360,719.5" />
         <EdgeLayout
           Id="Package\Carga de Produto.Paths[Saída de Atualizações de Membro Inferido]"
-          TopLeft="434.5,659.5">
+          TopLeft="441,659.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8860,10 +8743,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         <NodeLayout
           Size="172,42"
           Id="Package\Carga de Produto\Comando OLE DB 1"
-          TopLeft="576.5,719.5" />
+          TopLeft="583,719.5" />
         <EdgeLayout
           Id="Package\Carga de Produto.Paths[Saída de Atualizações de Atributo de Alteração]"
-          TopLeft="486.75,659.5">
+          TopLeft="493.25,659.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -8915,7 +8798,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       &lt;IdentificationString&gt;Conversão de colunas para PRODUTOS.Saídas[Saída de Conversão de Dados].Colunas[ARQUIVO_ORIGEM_CONVERTIDO]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;arquivo_origem&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;Juntado dados XML e JSON.Saídas[Saída da Junção de Mesclagem].Colunas[unidade]&lt;/IdentificationString&gt;
@@ -8924,10 +8807,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;Conversão de colunas para PRODUTOS.Saídas[Saída de Conversão de Dados].Colunas[FORNECEDOR_CONVERTIDO]&lt;/IdentificationString&gt;
+      &lt;IdentificationString&gt;Conversão de colunas para PRODUTOS.Saídas[Saída de Conversão de Dados].Colunas[CNPJ_CONVERTIDO]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;cod_fornecedor&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;Juntado dados XML e JSON.Saídas[Saída da Junção de Mesclagem].Colunas[SKU_CONVERTIDO]&lt;/IdentificationString&gt;
@@ -8948,10 +8831,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;Juntado dados XML e JSON.Saídas[Saída da Junção de Mesclagem].Colunas[FORNECEDOR]&lt;/IdentificationString&gt;
+      &lt;IdentificationString&gt;Conversão de colunas para PRODUTOS.Saídas[Saída de Conversão de Dados].Colunas[FORNECEDOR_CONVERTIDO]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;desc_fornecedor&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;Juntado dados XML e JSON.Saídas[Saída da Junção de Mesclagem].Colunas[descritor]&lt;/IdentificationString&gt;
@@ -8977,19 +8860,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
   &lt;DateVariable /&gt;
   &lt;EnableInferredSupport&gt;true&lt;/EnableInferredSupport&gt;
 &lt;/SCDWizardMetadata&gt;</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Carga de Produto\Insert Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
